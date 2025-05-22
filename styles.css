@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+body{
+    margin: 0;
+}
+
+h1 {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+header{
+    background-color: gray;
+    display: flex;
+    padding: 8px;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+    margin: 12px;
+    margin-left: auto;
+}
+header ul li{
+    margin: 4px 12px;
+}
+header ul li:hover{
+    background-color: black;
+}
+
+.logo{
+    color: white;
+    margin: auto 0 auto 12px;
+}
+
+.row{
+    display: flex;
+}
+
+@media (width <= 768){
+
+}

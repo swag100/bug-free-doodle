@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
 
-    font-family: "Outfit", sans-serif;
+    font-family: "Lexend Exa", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-optical-sizing: auto;
+
+    color:white;
 }
 
 body, html {
@@ -15,19 +17,22 @@ body{
     background-color: #000;
 }
 
+h1{
+    font-size: 3em;
+}
 h1, a{
     color:white;
     text-decoration: none;
 }
 
 button{
-    border-radius: 22px;
+    border-radius: 3em;
     border: none;
     filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));
     color: white;
     background-color: rgb(205, 64, 240);
-    font-size: 2.5em;
-    padding: 10px 24px;
+    font-size: 2em;
+    padding: 12px 32px;
     margin:auto;
 
     transition-timing-function: ease-out;
@@ -37,21 +42,25 @@ button:hover{
     background-color: rgb(210, 104, 236);
 }
 
-.logo a {
+.logo a, h1 {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 .logo{
     color: white;
-    margin: auto 0 auto 24px;
+    margin: auto 0 3px 24px;
+    font-size: revert;
 }
 
 .header{
-    background-color: rgba(8, 8, 8, 0.9);
-    backdrop-filter: blur(3px);
+    background-color: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(20px);
     backdrop-filter: saturate(80%);
     position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
 }
 
 .nav{
@@ -70,7 +79,7 @@ button:hover{
     transition: 0.3s;
 }
 .nav li a:hover{
-    background-color: rgba(64, 64, 64, 0.9);
+    background-color: rgba(64, 64, 64, 0.85);
 }
 .banner{
     background-image: linear-gradient(
@@ -82,7 +91,7 @@ button:hover{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: calc(100% - 44px); /*44 is height of header*/
+    height: calc(100% - 16px); /*44 is height of header*/
 
     justify-content: center;
     flex-direction: column;
@@ -92,20 +101,54 @@ button:hover{
     flex-direction: column;
     width: 100%;
     padding: 0 64px;
+    gap: 2em;
 }
 .banner-container span{
-    font-size: clamp(2em, 8vw, 4.5em);
+    font-size: clamp(2.5em, 8vw, 4.5em);
 
     color:white;
     text-align: center;
     filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));
     
 }
+.content{
+    width: 70%;
+    max-width: 1280px;
+    margin: auto;
+    margin-top: -80px;
+    padding: 20px;
+    font-size: larger;
+}
+.content h1{
+    margin-bottom: 0;
+    margin-left: -60px;
+}
+.content img{
+    margin: 20px;
+    margin-left: -10px;
+    margin-bottom: 0;
+    width: 100%;
+    max-height: fit-content;
+    border-radius: 5px;
+}
 
 .row{
     display: flex;
 }
 
-@media (width <= 768){
+@media (width <= 768px){
+    .row{
+        flex-direction: column;
+    }
 
+    .content{
+        width: 100%;
+    }
+    .content h1, .content img{
+        margin-left: 0;
+    }
+    .content p{
+        margin-left: 20px;
+    }
+    /*make hamburger*/
 }

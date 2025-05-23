@@ -21,13 +21,13 @@ h1, a{
 }
 
 button{
-    border-radius: 14px;
+    border-radius: 22px;
     border: none;
     filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));
     color: white;
     background-color: rgb(205, 64, 240);
-    font-size: 2em;
-    padding: 8px 20px;
+    font-size: 2.5em;
+    padding: 10px 24px;
     margin:auto;
 
     transition-timing-function: ease-out;
@@ -89,12 +89,16 @@ button:hover{
 .banner-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 0 64px;
 }
 .banner-container span{
-    font-size: 4.5em;
+    font-size: clamp(2em, 8vw, 4.5em);
+
     color:white;
     text-align: center;
     filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));
+    
 }
 
 .row{

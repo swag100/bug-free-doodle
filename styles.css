@@ -51,6 +51,7 @@ button:hover{
     background-color: rgba(8, 8, 8, 0.9);
     backdrop-filter: blur(3px);
     backdrop-filter: saturate(80%);
+    position: fixed;
 }
 
 .nav{

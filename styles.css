@@ -12,22 +12,23 @@ body, html {
 }
 body{
     margin: 0;
+    background-color: #000;
 }
 
-a{
+h1, a{
     color:white;
     text-decoration: none;
 }
 
 button{
-    border-radius: 12px;
+    border-radius: 14px;
     border: none;
-    outline: 3px solid rgba(114, 30, 163, 0.4);
-    /*filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));*/
+    filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));
     color: white;
     background-color: rgb(205, 64, 240);
     font-size: 2em;
-    padding: 8px 16px;
+    padding: 8px 20px;
+    margin:auto;
 
     transition-timing-function: ease-out;
     transition: 0.3s;
@@ -36,14 +37,14 @@ button:hover{
     background-color: rgb(210, 104, 236);
 }
 
-h1, .logo a {
+.logo a {
     font-family: "Syncopate", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 .logo{
     color: white;
-    margin: auto 0 auto 12px;
+    margin: auto 0 auto 24px;
 }
 
 .header{
@@ -74,13 +75,26 @@ h1, .logo a {
     background-image: linear-gradient(
         to bottom, 
         rgba(255,255,255,0) 20%,
-        rgba(255,255,255,1)), 
+        rgba(0,0,0,1)), 
         url('./tulips.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: calc(90% - 28px);
+    height: calc(100% - 44px); /*44 is height of header*/
+
+    justify-content: center;
+    flex-direction: column;
+}
+.banner-container{
+    display: flex;
+    flex-direction: column;
+}
+.banner-container span{
+    font-size: 4.5em;
+    color:white;
+    text-align: center;
+    filter: drop-shadow(0 10px 4px rgba(0, 0, 0, 0.5));
 }
 
 .row{
